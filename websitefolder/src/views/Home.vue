@@ -14,6 +14,10 @@
       <Contact />
     </template>
     
+    <!--Personal Projects-->
+    <template v-if="currentPage === 2">
+      <Projects />
+    </template>
   </div>
 </template>
 
@@ -22,13 +26,15 @@
 import MainPage from "@/components/MainPage.vue";
 import TopNav from "@/components/TopNav.vue";
 import Contact from "@/components/Contact.vue";
+import Projects from "@/components/Projects.vue";
 
 export default {
   name: "home",
   components: {
     MainPage,
     TopNav,
-    Contact
+    Contact,
+    Projects
   },
   data: () => ({
     currentPage: 0

@@ -6,7 +6,7 @@
 import TopNav from "@/components/TopNav.vue";
 
 export default {
-  name: "contact",
+  name: "projects",
   components: {
     TopNav
   },

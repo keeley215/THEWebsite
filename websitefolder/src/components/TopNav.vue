@@ -4,14 +4,18 @@
             Keeley Johansen
         </div>
 
-        <v-spacer></v-spacer>
+        <v-spacer/>
 
         <router-link to="/" class="nav-button">
-            <span class="nav-button">Home</span>
+            <span>Home</span>
         </router-link>
 
         <router-link to="/Contact" class="nav-button">
             <span>Contact Info</span>
+        </router-link>
+
+         <router-link to="/Projects" class="nav-button">
+            <span>Projects</span>
         </router-link>
     </v-app-bar>
 </template>

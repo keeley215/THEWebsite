@@ -4,9 +4,19 @@
     <!--Weird scrolly thing-->
     <v-parallax
       width="100%"
-      height="300"
+      min-height="100%"
       src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
-    />
+    >
+      <v-row
+        align="center"
+        justify="center"
+      >
+        <v-col class="text-center" cols="12">
+          <h1 class="display-1 font-weight-thin mb-4">Keeley Johansen</h1>
+          <h4 class="subheading"><u>View My Projects!</u></h4>
+        </v-col>
+      </v-row>
+    </v-parallax>
 
     <!--Box containing all of my projects-->
     <v-card class="mx-auto content-container">
@@ -39,11 +49,11 @@
               </v-card-text>
 
               <v-card-actions v-if="hover">
-                <v-spacer></v-spacer>
+                <v-spacer/>
                 <v-btn>
                   Find Out More
                 </v-btn>
-                <v-spacer></v-spacer>
+                <v-spacer/>
               </v-card-actions>
             </v-card>
           </v-hover>
@@ -53,7 +63,9 @@
     </v-card>
     <u>Things to do:</u> <br>
     1. Make the projects on hover <br>
-    2. Contact page
+    2. Contact page <br>
+    3. Make the parallax longer to take up the whole screen when you start <br>
+    4. Make project page
   </v-container>
 </template>
 
