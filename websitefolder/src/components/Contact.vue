@@ -1,5 +1,5 @@
 <template>
-  <TopNav/>
+  <TopNav />
 </template>
 
 <script>
@@ -12,7 +12,7 @@ export default {
   },
 
   data: () => ({
-      //
+    //
   })
 };
 </script>
