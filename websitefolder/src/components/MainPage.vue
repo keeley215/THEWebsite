@@ -65,10 +65,9 @@
       </v-container>
     </v-card>
     <u>Things to do:</u> <br />
-    1. Make the projects on hover <br />
-    2. Contact page <br />
-    3. Make the parallax longer to take up the whole screen when you start
-    <br />
+    1. Contact page <br />
+    2. Fix primary color issue<br />
+    3. add social media links on the main page somewhere<br />
     4. Make project page
   </v-container>
 </template>
