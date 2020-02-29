@@ -1,21 +1,21 @@
 <template>
   <v-app-bar class="nav">
-    <div class="d-flex align-center">
-      Keeley Johansen
+    <div class="d-flex align-center name">
+      KEELEY JOHANSEN
     </div>
 
     <v-spacer />
 
     <router-link to="/" class="nav-button">
-      <span>Home</span>
+        HOME
     </router-link>
 
     <router-link to="/Contact" class="nav-button">
-      Contact Info
+        CONTACT
     </router-link>
 
     <router-link to="/Projects" class="nav-button">
-      <span>Projects</span>
+        PROJECTS
     </router-link>
   </v-app-bar>
 </template>
@@ -34,10 +34,17 @@ export default {
 .nav-button {
   background-color: white;
   color: black;
-  margin-left: 7em;
+  margin-right: 5em;
+  text-decoration: none;
 }
 
-a {
-  text-decoration: none;
+.nav-button:hover {
+  color: red;
+}
+
+.name {
+    margin-left: 2em;
+    font-weight: 500;
+    font-size: 30px;
 }
 </style>
