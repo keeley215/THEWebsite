@@ -4,12 +4,15 @@
     <v-parallax
       width="100%"
       min-height="100%"
-      src="https://cdn.vuetifyjs.com/images/parallax/material2.jpg"
+      height="700"
+      :src="require('@/assets/RickAndMorty.jpg')"
     >
       <v-row align="center" justify="center">
-        <v-col class="text-center" cols="12">
-          <h1 class="display-1 font-weight-thin mb-4">Keeley Johansen</h1>
-          <h4 class="subheading"><u>View My Projects!</u></h4>
+        <v-col class="text-center front-page-messages" cols="12">
+          <h1 class="display-1  mb-4">Keeley Johansen</h1>
+          <router-link to="/Projects">
+            <h4 class="subheading"><u>View My Projects!</u></h4>
+          </router-link>
         </v-col>
       </v-row>
     </v-parallax>
@@ -137,5 +140,9 @@ export default {
   padding: 0;
   margin: 0;
   max-width: 2000px;
+}
+
+.front-page-messages {
+  color: primary;
 }
 </style>
