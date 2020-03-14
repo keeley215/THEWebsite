@@ -7,15 +7,15 @@
     <v-spacer />
 
     <router-link to="/" class="nav-button">
-        HOME
+      HOME
     </router-link>
 
     <router-link to="/Contact" class="nav-button">
-        CONTACT
+      CONTACT
     </router-link>
 
     <router-link to="/Projects" class="nav-button">
-        PROJECTS
+      PROJECTS
     </router-link>
   </v-app-bar>
 </template>
@@ -39,12 +39,12 @@ export default {
 }
 
 .nav-button:hover {
-  color: red;
+  color: #29b6f6;
 }
 
 .name {
-    margin-left: 2em;
-    font-weight: 500;
-    font-size: 30px;
+  margin-left: 2em;
+  font-weight: 500;
+  font-size: 30px;
 }
 </style>

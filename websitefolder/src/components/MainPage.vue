@@ -27,7 +27,7 @@
             :cols="project.flex"
           >
             <v-hover v-slot:default="{ hover }">
-              <v-card class="content-items">
+              <v-card class="content-items" elevation="18">
                 <v-list-item>
                   <v-list-item-content>
                     <v-list-item-title class="headline">{{
@@ -44,20 +44,21 @@
                   gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
                   height="200px"
                 >
-                  <!-- <v-card-title v-text="project.title"></v-card-title> -->
+                  <v-expand-transition>
+                    <div
+                      v-if="hover"
+                      class="transition-fast-in-fast-out project-pop-ups light-blue darken-2 white--text"
+                      style="height: 100%;"
+                    >
+                      {{ project.description }}
+                      <div class="project-buttons">
+                        <v-btn>
+                          Find Out More
+                        </v-btn>
+                      </div>
+                    </div>
+                  </v-expand-transition>
                 </v-img>
-
-                <v-card-text v-if="hover">
-                  {{ project.description }}
-                </v-card-text>
-
-                <v-card-actions v-if="hover">
-                  <v-spacer />
-                  <v-btn>
-                    Find Out More
-                  </v-btn>
-                  <v-spacer />
-                </v-card-actions>
               </v-card>
             </v-hover>
           </v-col>
@@ -68,7 +69,8 @@
     1. Contact page <br />
     2. Fix primary color issue<br />
     3. add social media links on the main page somewhere<br />
-    4. Make project page
+    4. Make project page <br />
+    5. Find out how large the users screen is and make the parallax that
   </v-container>
 </template>
 
@@ -143,5 +145,18 @@ export default {
 
 .front-page-messages {
   color: primary;
+}
+
+.project-buttons {
+  margin-top: 1em;
+  padding-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-pop-ups {
+  opacity: 0.85;
+  padding: 15px;
 }
 </style>
