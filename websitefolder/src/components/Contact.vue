@@ -1,32 +1,52 @@
 <template>
   <div>
     <TopNav />
-    <div class="contact-container">
-    <v-card class="contact-body">
-      <div class="contact-nav">
-        <!-- <v-card flat tile width="100%" class="red lighten-1 text-center">
-          <v-card-text>
-            <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon>
-              <v-icon size="24px">{{ icon }}</v-icon>
-            </v-btn>
-          </v-card-text>
-        </v-card> -->
-        This is where the logos will go for social media
+    <div class="content-wraper">
+      <div class="contact-container">
+        <v-card class="contact-left-side">
+          <div class="contact-title">
+            <h1>Keeley Johansen</h1>
+            <h3>Developer//Innovator//<br>
+            Strategist//Explorer
+            </h3>
+          </div>
+        </v-card>
       </div>
-      <div class="contact-nav">
-        Aw man this has the photo in it.
+      <div class="contact-container">
+        <div class="contact-right-side">
+          <div>
+            <v-card tile width="100%" class="text-center">
+              <v-card-text class="contact-nav-1">
+                <v-btn v-for="icon in icons" :key="icon" class="mx-4" icon :href="icon.links">
+                  <v-icon light size="24px">{{ icon.iconPhoto }}</v-icon>
+                </v-btn>
+              </v-card-text>
+            </v-card>
+          </div>
+          <div>
+            <v-card tile class="contact-nav-2">
+              <div class="contact-nav-2-top">
+                <div>
+                  <img :src="require('@/assets/me.jpg')"/>
+                </div>
+                <div class="content-nav-2-top-right">
+                  <h2>Keeley Johansen</h2><br>
+                  Software Developer - Knowledge seeking in an ever chaging industry
+                </div>
+              </div>
+              <div class="contact-nav-2-body">
+                <i>About Me</i><br>
+                <hr class="content-line">
+                Hey everyone. Thats me in that photo. I know what you are thinking. Man this is one handsome ginger. You would be correct, but thats not what we are here to talk about.
+                <b>Contact Information:</b><br>
+                <u>Email:</u> keeley5456@gmail.com <br>
+                <u>Github:</u> https://github.com/keeley215 <br>
+                <u>Linkedin:</u> https://www.linkedin.com/in/keeley-johansen/
+              </div>
+            </v-card>
+          </div>
+        </div>
       </div>
-      <!-- <h1 class="contact-title">ABOUT ME</h1>
-      <img :src="require('@/assets/me.jpg')"/>
-      Hey everyone. Thats me in that photo. I know what you are thinking. Man this is one handsome ginger. You would be correct, but thats not what we are here to talk about.
-      <br>
-      <v-card>
-        <b>Contact Information:</b><br>
-        <u>Email:</u> keeley5456@gmail.com <br>
-        <u>Github:</u> https://github.com/keeley215 <br>
-        <u>Linkedin:</u> https://www.linkedin.com/in/keeley-johansen/ <br>
-      </v-card> -->
-    </v-card>
     </div>
   </div>
 </template>
@@ -42,29 +62,67 @@ export default {
   },
 
   data: () => ({
-    icons: [mdiGithub, mdiLinkedin],
-    items: ["default", "absolute", "fixed"],
-    variant: "default"
+    icons: [
+      {
+      iconPhoto: mdiGithub,
+      links: "https://github.com/keeley215",
+      },
+      {
+      iconPhoto: mdiLinkedin,
+      links: "https://www.linkedin.com/in/keeley-johansen/",
+      }
+    ]
   })
 };
 </script>
 <style scoped>
-  .contact-body {
+  .content-wraper {
     display: flex;
-    width: 33%;
-    justify-content: center;
+    justify-content: space-between;
+    background-color: lightskyblue;
+    height: 100%;
   }
-  .contact-nav {
-    display: block;
-  }
-
-  .contact-container {
+  .contact-container{
     display: flex;
-    align-self: end;
     justify-content: right;
+    margin-top: 2em;
+    margin-right: 2em;
+  }
+  .contact-left-side {
+    margin-left: 4em;
+    margin-top: 4em;
+    display: flex;
+  }
+  .contact-right-side{
+    width: 38%;
+  }
+  .contact-nav-1 {
+    display: block;
+    margin-bottom: 2em;
+    padding: .5em;
+  }
+  .contact-nav-2 {
+    display: block;
+    margin-bottom: 2em;
+    padding: 2em;
+  }
+  .contact-nav-2-top {
+    display: flex;
+  }
+  .content-nav-2-top-right {
+    margin-left: 2em;
+  }
+  .content-line {
+    border: 1px solid grey;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .contact-nav-2-body {
+    margin-top: 4em;
   }
   .contact-title {
-    font-size: 70px;
+    display: inline;
+    font-size: 30px;
     color: #29b6f6;
   }
 </style>
