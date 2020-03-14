@@ -1,6 +1,7 @@
 <template>
   <div>
     <TopNav />
+    <div class="contact-container">
     <v-card class="contact-body">
       <div class="contact-nav">
         <!-- <v-card flat tile width="100%" class="red lighten-1 text-center">
@@ -26,6 +27,7 @@
         <u>Linkedin:</u> https://www.linkedin.com/in/keeley-johansen/ <br>
       </v-card> -->
     </v-card>
+    </div>
   </div>
 </template>
 
@@ -50,12 +52,19 @@ export default {
   .contact-body {
     display: flex;
     width: 33%;
+    justify-content: center;
+  }
+  .contact-nav {
+    display: block;
+  }
+
+  .contact-container {
+    display: flex;
     align-self: end;
+    justify-content: right;
   }
   .contact-title {
     font-size: 70px;
     color: #29b6f6;
-  }
-  .contact-nav {
   }
 </style>
