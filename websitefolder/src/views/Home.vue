@@ -13,7 +13,7 @@
     <template v-if="currentPage === 1">
       <Contact />
     </template>
-    
+
     <!--Personal Projects-->
     <template v-if="currentPage === 2">
       <Projects />
