@@ -135,7 +135,7 @@ export default {
   padding: 15px;
 }
 .content-items {
-  margin: 30px 15px;
+  margin: 15px 15px;
 }
 .page-body {
   padding: 0;
