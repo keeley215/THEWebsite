@@ -1,6 +1,9 @@
 <template>
-  <TopNav />
+  <div>
+    <TopNav />
+  </div>
 </template>
+
 
 <script>
 import TopNav from "@/components/TopNav.vue";
@@ -16,3 +19,6 @@ export default {
   })
 };
 </script>
+
+<style scoped>
+</style>

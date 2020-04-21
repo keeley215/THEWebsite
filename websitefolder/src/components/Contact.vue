@@ -5,7 +5,8 @@
       <div class="contact-container">
         <div class="contact-left-side">
           <div class="contact-title">
-            <h1 class="contact-title-name1">KEELEY</h1><h1 class="contact-title-name2">JOHANSEN</h1>
+            <h1 class="contact-title-name1">KEELEY</h1>
+            <h1 class="contact-title-name2">JOHANSEN</h1>
             <h3>
               Developer//Innovator//<br />
               Dynamic//Leader
@@ -39,8 +40,8 @@
                 <div class="content-nav-2-top-right">
                   <div class="contact-card-name">Keeley Johansen</div>
                   <div class="contact-card-description">
-                    <i>Software Developer</i> - Knowledge seeking in an ever chaging
-                    industry
+                    <i>Software Developer</i> - Knowledge seeking in an ever
+                    chaging industry
                   </div>
                 </div>
               </div>
@@ -48,19 +49,19 @@
                 <i>About Me</i><br />
                 <hr class="content-line" />
                 <div class="body-paragraph">
-                  I'm a recent college graduate (DEC 2018) trying to learn as much
-                  as i can about everything. I'm currently a programmer but i have 
-                  many interests outside of that.
+                  I'm a recent college graduate (DEC 2018) trying to learn as
+                  much as i can about everything. I'm currently a programmer but
+                  i have many interests outside of that.
                 </div>
                 <div class="body-paragraph">
-                  Outside of programming im also a carpenter, roofer, bartender, 
-                  longboarder, traveler, gamer, athlete, and realistate investor.
-                  I like to do many things.
+                  Outside of programming im also a carpenter, roofer, bartender,
+                  longboarder, traveler, gamer, athlete, and realistate
+                  investor. I like to do many things.
                 </div>
                 <div class="body-paragraph">
-                  One of my personal traits that i am most proud of is my ability to 
-                  dynamically make a team work together. I am a extroverted programmer 
-                  who is very empathetic towards others.
+                  One of my personal traits that i am most proud of is my
+                  ability to dynamically make a team work together. I am a
+                  extroverted programmer who is very empathetic towards others.
                 </div>
               </div>
             </v-card>
@@ -161,11 +162,11 @@ export default {
   font-size: 22px;
 }
 .contact-title-name1 {
-  margin-top: -.63em;
+  margin-top: -0.63em;
   font-size: 105px;
 }
 .contact-title-name2 {
-  margin-top: -.63em;
+  margin-top: -0.63em;
   font-size: 70px;
 }
 .body-paragraph {
@@ -174,5 +175,4 @@ export default {
 .contact-card-description {
   margin-top: 1em;
 }
-
 </style>
