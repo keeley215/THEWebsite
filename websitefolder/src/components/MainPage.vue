@@ -17,8 +17,6 @@
       </v-row>
     </v-parallax>
 
-    <div class="parallx"></div>
-
     <!--Box containing all of my projects-->
     <v-card class="mx-auto content-container">
       <v-container fluid>
