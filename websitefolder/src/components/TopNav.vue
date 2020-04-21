@@ -29,6 +29,8 @@ export default {
 <style scoped>
 .nav {
   color: black;
+  border-width: 5px;
+  border-color: black;
 }
 
 .nav-button {

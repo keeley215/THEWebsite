@@ -1,11 +1,11 @@
 <template>
-  <v-container class="page-body">
+  <div class="page-body">
     <!--Weird scrolly thing-->
     <v-parallax
       width="100%"
       min-height="100%"
       height="700"
-      :src="require('@/assets/RickAndMorty.jpg')"
+      :src="require('@/assets/Brick_transparent background.png')"
     >
       <v-row align="center" justify="center">
         <v-col class="text-center front-page-messages" cols="12">
@@ -16,6 +16,8 @@
         </v-col>
       </v-row>
     </v-parallax>
+
+    <div class="parallx"></div>
 
     <!--Box containing all of my projects-->
     <v-card class="mx-auto content-container">
@@ -28,21 +30,21 @@
           >
             <v-hover v-slot:default="{ hover }">
               <v-card class="content-items" elevation="18">
-                <v-list-item>
-                  <v-list-item-content>
-                    <v-list-item-title class="headline">{{
-                      project.title
-                    }}</v-list-item-title>
-                    <v-list-item-subtitle
-                      >{{ project.type }} Project</v-list-item-subtitle
-                    >
-                  </v-list-item-content>
-                </v-list-item>
+                <!-- <v-list-item>
+                      <v-list-item-content>
+                        <v-list-item-title class="headline">{{
+                          project.title
+                        }}</v-list-item-title>
+                        <v-list-item-subtitle
+                          >{{ project.type }} Project</v-list-item-subtitle
+                        >
+                      </v-list-item-content>
+                </v-list-item>-->
                 <v-img
                   :src="project.imageSource"
                   class="white--text align-end"
                   gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-                  height="200px"
+                  height="300px"
                 >
                   <v-expand-transition>
                     <div
@@ -52,9 +54,7 @@
                     >
                       {{ project.description }}
                       <div class="project-buttons">
-                        <v-btn>
-                          Find Out More
-                        </v-btn>
+                        <v-btn>Find Out More</v-btn>
                       </div>
                     </div>
                   </v-expand-transition>
@@ -65,13 +65,7 @@
         </v-row>
       </v-container>
     </v-card>
-    <u>Things to do:</u> <br />
-    1. Contact page <br />
-    2. Fix primary color issue<br />
-    3. add social media links on the main page somewhere<br />
-    4. Make project page <br />
-    5. Find out how large the users screen is and make the parallax that
-  </v-container>
+  </div>
 </template>
 
 <script>
@@ -132,21 +126,20 @@ export default {
 
 <style scoped>
 .content-container {
-  padding: 15px;
+  border-radius: 0 !important;
 }
 .content-items {
   margin: 15px 15px;
+  border-radius: 0 !important;
 }
 .page-body {
   padding: 0;
   margin: 0;
-  max-width: 2000px;
+  height: 100vw;
 }
-
 .front-page-messages {
   color: primary;
 }
-
 .project-buttons {
   margin-top: 1em;
   padding-bottom: 0.5em;
@@ -154,7 +147,6 @@ export default {
   align-items: center;
   justify-content: center;
 }
-
 .project-pop-ups {
   opacity: 0.85;
   padding: 15px;
