@@ -1,7 +1,7 @@
 <template>
-  <v-app-bar class="nav">
+  <v-app-bar flat elevation="1">
     <div class="d-flex align-center name">
-      KEELEY JOHANSEN
+      K . C . J
     </div>
 
     <v-spacer />
@@ -27,12 +27,6 @@ export default {
 </script>
 
 <style scoped>
-.nav {
-  color: black;
-  border-width: 5px;
-  border-color: black;
-}
-
 .nav-button {
   background-color: white;
   color: black;
