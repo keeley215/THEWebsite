@@ -1,7 +1,7 @@
 <template>
-  <v-app-bar class="nav">
+  <v-app-bar flat elevation="1">
     <div class="d-flex align-center name">
-      KEELEY JOHANSEN
+      K . C . J
     </div>
 
     <v-spacer />
@@ -27,23 +27,15 @@ export default {
 </script>
 
 <style scoped>
-.nav {
-  color: black;
-  border-width: 5px;
-  border-color: black;
-}
-
 .nav-button {
   background-color: white;
   color: black;
   margin-right: 5em;
   text-decoration: none;
 }
-
 .nav-button:hover {
   color: #29b6f6;
 }
-
 .name {
   margin-left: 2em;
   font-weight: 500;
