@@ -1,34 +1,42 @@
 <template>
   <div class="page-body">
     <!--Weird scrolly thing-->
-    <v-parallax
-      width="100%"
-      min-height="100%"
-      height="700"
-      :src="require('@/assets/Brick_transparent background.png')"
-    >
-      <v-row align="center" justify="center">
-        <v-col class="text-center front-page-messages" cols="12">
-          <h1 class="display-1  mb-4">Keeley Johansen</h1>
-          <router-link to="/Projects">
-            <h4 class="subheading"><u>View My Projects!</u></h4>
-          </router-link>
-        </v-col>
-      </v-row>
-    </v-parallax>
+    <div class="parallax-container">
+      <v-parallax
+        width="100%"
+        min-height="100%"
+        height="700"
+        :src="require('@/assets/Brick_transparent background.png')"
+      >
+        <v-row align="center" justify="center">
+          <v-col class="text-center front-page-messages" cols="12">
+            <h1 class="display-1  mb-4">Keeley Johansen</h1>
+            <router-link to="/Projects">
+              <h4 class="subheading custom-subheading">
+                <u>View My Projects!</u>
+              </h4>
+            </router-link>
+          </v-col>
+        </v-row>
+      </v-parallax>
 
-    <!--Box containing all of my projects-->
-    <v-card class="mx-auto content-container">
-      <v-container fluid>
-        <v-row dense>
-          <v-col
-            v-for="project in projects"
-            :key="project.title"
-            :cols="project.flex"
-          >
-            <v-hover v-slot:default="{ hover }">
-              <v-card class="content-items" elevation="18">
-                <!-- <v-list-item>
+      <!--Box containing all of my projects-->
+      <v-card class="mx-auto content-container">
+        <v-container fluid>
+          <div class="project-header">
+            <div class="header">Hello</div>
+            <div class="sub-text">Welcome to my Website</div>
+          </div>
+          <v-card outlined dark class="project-container">
+            <v-row dense>
+              <v-col
+                v-for="project in projects"
+                :key="project.title"
+                :cols="project.flex"
+              >
+                <v-hover v-slot:default="{ hover }">
+                  <v-card class="content-items" light outlined>
+                    <v-list-item>
                       <v-list-item-content>
                         <v-list-item-title class="headline">{{
                           project.title
@@ -37,32 +45,34 @@
                           >{{ project.type }} Project</v-list-item-subtitle
                         >
                       </v-list-item-content>
-                </v-list-item>-->
-                <v-img
-                  :src="project.imageSource"
-                  class="white--text align-end"
-                  gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-                  height="300px"
-                >
-                  <v-expand-transition>
-                    <div
-                      v-if="hover"
-                      class="transition-fast-in-fast-out project-pop-ups light-blue darken-2 white--text"
-                      style="height: 100%;"
-                    >
-                      {{ project.description }}
-                      <div class="project-buttons">
-                        <v-btn>Find Out More</v-btn>
+                    </v-list-item>
+                    <!-- <v-img
+                      :src="project.imageSource"
+                      class="white--text align-end"
+                      gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
+                      height="300px"
+                    > -->
+                    <v-expand-transition>
+                      <div
+                        v-if="hover"
+                        class="transition-fast-in-fast-out project-pop-ups light-blue darken-2 white--text"
+                        style="height: 100%;"
+                      >
+                        {{ project.description }}
+                        <div class="project-buttons">
+                          <v-btn>Find Out More</v-btn>
+                        </div>
                       </div>
-                    </div>
-                  </v-expand-transition>
-                </v-img>
-              </v-card>
-            </v-hover>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-card>
+                    </v-expand-transition>
+                    <!-- </v-img> -->
+                  </v-card>
+                </v-hover>
+              </v-col>
+            </v-row>
+          </v-card>
+        </v-container>
+      </v-card>
+    </div>
   </div>
 </template>
 
@@ -123,17 +133,32 @@ export default {
 </script>
 
 <style scoped>
+.parallax-container {
+}
 .content-container {
   border-radius: 0 !important;
+  padding: 4em;
 }
 .content-items {
   margin: 15px 15px;
   border-radius: 0 !important;
 }
+.header {
+  text-align: center;
+  font-size: 50pt;
+  font-family: cursive;
+  font-weight: 600;
+}
+.sub-text {
+  text-align: center;
+  font-size: 30pt;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 300;
+  padding-bottom: 2em;
+}
 .page-body {
   padding: 0;
   margin: 0;
-  height: 100vw;
 }
 .front-page-messages {
   color: primary;
@@ -148,5 +173,12 @@ export default {
 .project-pop-ups {
   opacity: 0.85;
   padding: 15px;
+}
+.custom-subheading {
+  color: white;
+}
+.project-container {
+  border-radius: 0 !important;
+  padding: 4em;
 }
 </style>
