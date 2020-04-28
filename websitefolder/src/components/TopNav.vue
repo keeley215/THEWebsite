@@ -33,11 +33,9 @@ export default {
   margin-right: 5em;
   text-decoration: none;
 }
-
 .nav-button:hover {
   color: #29b6f6;
 }
-
 .name {
   margin-left: 2em;
   font-weight: 500;
