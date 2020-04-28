@@ -1,36 +1,3 @@
-
-Skip to content
-Pull requests
-Issues
-Marketplace
-Explore
-@keeley215
-Learn Git and GitHub without any code!
-
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-keeley215 /
-THEWebsite
-
-1
-0
-
-    0
-
-Code
-Issues 0
-Pull requests 0
-Actions
-Projects 0
-Wiki
-Security 3
-Insights
-Settings
-THEWebsite/websitefolder/src/components/MainPage.vue
-@keeley215 keeley215 too small of a detail 0cdf046 19 minutes ago
-We found potential security vulnerabilities in your dependencies.
-
-Only the owner of this repository can see this message.
-184 lines (180 sloc) 5.3 KB
 <template>
   <div class="page-body">
     <!--Weird scrolly thing-->
