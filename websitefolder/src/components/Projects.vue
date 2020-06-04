@@ -7,7 +7,12 @@
       <v-card class="project-timeline">
         <div class="project-title">My Project Page</div>
         <v-timeline>
-          <v-timeline-item fill-dot color="white" v-for="project in projects" :key="project">
+          <v-timeline-item
+            fill-dot
+            color="white"
+            v-for="project in projects"
+            :key="project"
+          >
             <template v-slot:opposite>
               <b>
                 <span v-text="project.year" />
@@ -98,6 +103,14 @@ export default {
         description:
           "Developed an application from the ground up using VUE.js, CSS, HTML5, and git. This is also the first project that i had to design the full UI of.",
         type: "Personal",
+        year: "2020"
+      },
+      {
+        title: "Selenium Testing Automation",
+        sub_title: "Application/Testing",
+        description:
+          "Helped introduce and develop testing automation using Selenium w/ Cucumber and Gherkin Language.",
+        type: "Work",
         year: "2020"
       }
     ]

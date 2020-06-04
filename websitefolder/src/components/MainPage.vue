@@ -10,7 +10,7 @@
       >
         <v-row align="center" justify="center">
           <v-col class="text-center front-page-messages" cols="12">
-            <h1 class="display-1  mb-4">Keeley Johansen</h1>
+            <h1 class="display-1 mb-4">Keeley Johansen</h1>
             <router-link to="/Projects">
               <h4 class="subheading custom-subheading">
                 <u>View My Projects!</u>
@@ -27,8 +27,8 @@
             <div class="header">Hello</div>
             <div class="sub-text">Welcome to my Website</div>
           </div>
-          <v-card outlined dark class="project-container">
-            <v-row dense>
+          <v-card flat class="project-container">
+            <v-row>
               <v-col
                 v-for="project in projects"
                 :key="project.title"
@@ -38,33 +38,27 @@
                   <v-card class="content-items" light outlined>
                     <v-list-item>
                       <v-list-item-content>
-                        <v-list-item-title class="headline">{{
-                          project.title
-                        }}</v-list-item-title>
                         <v-list-item-subtitle
                           >{{ project.type }} Project</v-list-item-subtitle
                         >
+                        <v-list-item-title class="project-item-header">{{
+                          project.title
+                        }}</v-list-item-title>
                       </v-list-item-content>
                     </v-list-item>
-                    <!-- <v-img
-                      :src="project.imageSource"
-                      class="white--text align-end"
-                      gradient="to bottom, rgba(0,0,0,.1), rgba(0,0,0,.5)"
-                      height="300px"
-                    > -->
+
                     <v-expand-transition>
                       <div
                         v-if="hover"
-                        class="transition-fast-in-fast-out project-pop-ups light-blue darken-2 white--text"
+                        class="transition-fast-in-fast-out project-pop-ups"
                         style="height: 100%;"
                       >
                         {{ project.description }}
-                        <div class="project-buttons">
-                          <v-btn>Find Out More</v-btn>
+                        <div class="project-button">
+                          <button>Find Out More</button>
                         </div>
                       </div>
                     </v-expand-transition>
-                    <!-- </v-img> -->
                   </v-card>
                 </v-hover>
               </v-col>
@@ -132,15 +126,18 @@ export default {
 </script>
 
 <style scoped>
-.parallax-container {
+.project-item-header {
+  margin-top: 0.5em;
+  font-size: 20pt;
 }
 .content-container {
   border-radius: 0 !important;
   padding: 4em;
 }
 .content-items {
-  margin: 15px 15px;
+  padding: 1em;
   border-radius: 0 !important;
+  height: 16em;
 }
 .header {
   text-align: center;
@@ -162,16 +159,17 @@ export default {
 .front-page-messages {
   color: primary;
 }
-.project-buttons {
-  margin-top: 1em;
+.project-button {
   padding-bottom: 0.5em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-top: 0.75em;
+  color: #29b6f6;
+  font-style: italic;
 }
 .project-pop-ups {
   opacity: 0.85;
-  padding: 15px;
+  padding-left: 1em;
+  padding-right: 1em;
+  font-size: 17px;
 }
 .custom-subheading {
   color: white;
